@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+    int n,sum=0,a[500];
+    printf("enter the array size: ");
+    scanf("%d",&n);
+    int m=((n*(n+1))/2);
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+        sum=sum+a[i];
+    }
+    printf("%d",m-sum);
+    return 0;
+}
+//logic=sum of n natural number-sum of array number;
+n=((n*(n+1))/2)
