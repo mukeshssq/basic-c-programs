@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char input[50];
+    scanf("%s",input);
+    // printf("%s",input);
+    
+    int n = strlen(input) - 1;
+    
+    for(int i =0;i<=n;i++){
+        for(int j=0;j<=n;j++){
+            if(i==j){
+                printf("%c", input[i]);
+                if(j != (n-1) && (n % 2 != 0)){
+                    printf(" ");
+                }
+            } else if(i == (n - j)){
+                printf("%c", input[j]);
+                if(j != (n-1)  && (n % 2 != 0)){
+                    printf(" ");
+                }
+            } else printf(" ");
+        }
+        printf("\n");
+    }
+    
+    
+    return 0;
+}
